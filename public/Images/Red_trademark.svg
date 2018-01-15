@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="197px" height="197px" version="1.1">
+<style type="text/css"><![CDATA[
+rect,#C1 {fill:#fff}
+#P1,#P2 {fill:none;stroke:#f00}
+#P1 {stroke-width:25;stroke-linecap:square}
+#P2 {stroke-width:28.05825615}
+#C0,#P1,#P0 {fill:#f00}
+]]></style>
+  <circle id="C0" cx="98" cy="98" r="98"/>
+  <circle id="C1" cx="98" cy="98" r="78"/>
+  <path id="P0" d="M77.459964,98.787467L 112.47057,151.5L 139.47057,151.5L 104.45996,98.787467L 77.459964,98.787467z" transform="translate(6.53182,0)"/>
+  <rect x="123" y="85" width="31" height="25"/>
+  <path id="P1" d="M50.164456,138.99735L 50.164456,55.38992" transform="translate(13.32493,0)"/>
+  <path id="P2" transform="matrix(0.9,0,0,.882097,-9.92839,.999403)" d="M88.542583,61.660475L 135.86208,61.660475C 148.84213,61.660475 159.37667,72.195011 159.37667,85.175065C 159.37666,98.155118 148.84213,108.68965 135.86208,108.68965L 88.542583,108.68965"/>
+</svg>
