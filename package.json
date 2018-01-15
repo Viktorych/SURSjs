@@ -1,0 +1,18 @@
+{
+  "name": "surs_njs",
+  "version": "1.0.0",
+  "description": "Система управления скоростью разливки стали ЦЭМ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Руденко О.В.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-snap7": "^0.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.10"
+  }
+}
