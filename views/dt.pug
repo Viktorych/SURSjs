@@ -1,17 +1,50 @@
 html
   head
     title!= title
+    script(type="text/javascript", src='/JS/jquery-3.2.1.min.js')
+    script(type="text/javascript", src='/JS/jquery.dataTables.min.js')
+    link(rel='stylesheet', href='/css/jquery.numbox-1.3.0.css')
+    link(rel='stylesheet', href='/css/jquery.dataTables.min.css')
   body
-    block scripts
-      script(src='/JS/jquery-3.2.1.min.js')
+    
     h1!= message
     table#tab
-        th Time of Service
-
-        tr
-            td(height='100px') Additional cheduled projects and service
-        tr
-            td Unscheduled Response – After Hours Monday – Friday, 6:00pm – 7:30am Saturday, Sunday
+        <thead>
+            <tr>
+                <th>Нименование</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    a(href="http://xcvcxv") В формате pdf
+    script.
+        $(document).ready(function() {
+        $('#tab').DataTable( {
+        "ajax": "data/data.txt",
+        "columns": [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+            ],
+        "language": {"url": "/data/Russian.json"}
+        } );
+        } );
      
         
 
