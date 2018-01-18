@@ -13,19 +13,14 @@ body {
 }
 
 .wrapper {
-    //display: flex;
-    //flex-direction: column;
+
     position: absolute;
     left: 10px;
     top: 10px;
-    width: 1200px;
+    width: 1600px;
     height: 850px; // margin-left: auto;
-    //margin-right: auto;
-    //margin:  auto; 
-    //margin: 5px 5px 5px 5px;
     background: #61e599;
     border: 1px solid #141931;
-    /* ��������� ����� */
     border-radius: 10px;
     padding: 5px 5px 5px 5px; //font: 14px/20px Arial, sans-serif;
 }
@@ -48,7 +43,7 @@ body {
 .data {
     position: absolute;
     top: 35px;
-    height: 85%;
+    height: 760px;
     left: 0;
     width: 410px;
     margin: 5px 5px 5px 5px;
@@ -64,7 +59,7 @@ body {
     top: 35px;
     height: 480px;
     left: 420px;
-    right: 0; //width: 410px;
+    right: 420px; //width: 410px;
     margin: 5px 5px 5px 5px;
     background: var(--main-bg-color);
     border: 1px solid #141931;
@@ -75,9 +70,23 @@ body {
 
 .svg_speed {
     position: absolute;
-    top: 525px;
-    height: 245px;
+    top: 528px;
+    height: 267px;
     left: 420px;
+    right: 420px; //width: 200px;
+    margin: 5px 5px 5px 5px;
+    background: var(--main-bg-color);
+    border: 1px solid #141931;
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+}
+
+.sim {
+    position: absolute;
+    top: 35px;
+    height: 480px;
+    left: 1185px;
     right: 0; //width: 200px;
     margin: 5px 5px 5px 5px;
     background: var(--main-bg-color);
@@ -86,6 +95,21 @@ body {
     padding: 1px 1px 1px 1px;
     text-align: center;
 }
+
+.svg_sim_speed {
+    position: absolute;
+    top: 528px;
+    height: 267px;
+    left: 1185px;
+    right: 0; //width: 200px;
+    margin: 5px 5px 5px 5px;
+    background: var(--main-bg-color);
+    border: 1px solid #141931;
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+}
+
 
 h1 {
     padding: 40px 20px 30px;
@@ -129,7 +153,7 @@ a {
 input,
 table {
     font: normal 13px Arial, SansSerif, Verdana;
-   
+
 }
 
 th,
@@ -186,8 +210,8 @@ td {
     position: absolute;
     top: 28px;
     height: 12px;
-    left: 60%;
-    right: 20%;
+    left: 440px;
+    right: 440px;
     margin: 0;
     background: var(--main-bg-color);
     border: 1px solid #141931;
@@ -198,10 +222,10 @@ td {
 
 .svg_speed_title {
     position: absolute;
-    top: 525px;
+    top: 528px;
     height: 12px;
-    left: 60%;
-    right: 20%;
+    left: 440px;
+    right: 440px;
     margin: 0;
     background: var(--main-bg-color);
     border: 1px solid #141931;
@@ -210,12 +234,26 @@ td {
     text-align: center;
 }
 
-.svg_data_title {
+.data_title {
     position: absolute;
     top: 28px;
     height: 12px;
-    left: 10%;
+    left: 20px;
     right: 75%;
+    margin: 0;
+    background: var(--main-bg-color);
+    border: 1px solid #141931;
+    border-radius: 5px;
+    padding: 1px 1px 5px 1px;
+    text-align: center;
+}
+
+.sim_title {
+    position: absolute;
+    top: 28px;
+    height: 12px;
+    left: 1195px;
+    right: 15px;
     margin: 0;
     background: var(--main-bg-color);
     border: 1px solid #141931;

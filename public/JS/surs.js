@@ -20,15 +20,12 @@ $(document).ready(function () {
 		height: gr_s.h
 	});
 
-
-
-
-
-	$('#netto').val(DATA.netto);
+	/*$('#netto').val(DATA.netto);
 	$("#wight1").val(DATA.steps.wight1);
 	$("#speed1").val(DATA.steps.speed1);
 	$("#wight2").val(DATA.steps.wight2);
 	$("#speed2").val(DATA.steps.speed2);
+    */
 	$("#netto").change(function () {
 		Calc();
 	});

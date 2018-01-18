@@ -23,6 +23,47 @@
                 <table cellspacing="1px" cellpadding="10" border="1" width="400">
                     <tbody>
                         <tr>
+                            <td class="txt">Номер плавки</td>
+                            <td class="txt">001</td>
+
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Марка слитка</td>
+                            <td class="txt">МР1</td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Количество слитков</td>
+                            <td class="txt"><input type="text" id="count_ingot" class="inp" min=0 max=8 step=1 value=8></td>
+                        </tr>
+                        <tr>
+                            <td class="txt">Необходимое количество металла</td>
+                            <td class="txt" id="ingot_wight"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Масса ковша c металлом</td>
+                            <td class="con"><input type="text" id="wight_ladle" class="inp" min="0" max="10" step="2" value="22500"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Масса ковша пустого</td>
+                            <td class="con"><input type="text" id="wight_empty_ladle" class="inp" min="0" max="10" step="2" value="9400"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Масса маталла в ковше</td>
+                            <td class="txt" id="brutto_ladle"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Параметры розлива
+                </p>
+                <table cellspacing="1px" cellpadding="10" border="1" width="400">
+                    <tbody>
+                        <tr>
                             <th rowspan="2">Наименование</th>
                             <th colspan="2">Значение</th>
 
@@ -34,54 +75,45 @@
 
                         </tr>
 
-                        <tr>
-                            <td class="txt">Масса ковша c металлом</td>
-                            <td class="con" colspan="2"><input type="text" id="netto" class="inp" min="0" max="10" step="2" value="6"></td>
 
-                        </tr>
-                        <tr>
-                            <td class="txt">Масса ковша пустого</td>
-                            <td class="con" colspan="2"><input type="text" id="entry" class="inp" min="0" max="10" step="2" value="9400"></td>
-
-                        </tr>
                         <tr>
                             <th colspan="3">Напонение литника</th>
 
                         </tr>
                         <tr>
                             <td class="txt">Масса</td>
-                            <td class="con" colspan="2"><input type="text" id="start_wight" class="inp"></td>
+                            <td class="con" colspan="2"><input type="text" id="start_wight" class="inp" value="700"></td>
                         </tr>
                         <tr>
-                            <td class="txt">Скорость</td>
-                            <td class="con"><input type="text" id="start_speed_min" class="inp"></td>
-                            <td class="con"><input type="text" id="start_speed_max" class="inp"></td>
+                            <td class="txt">Время</td>
+                            <td class="con"><input type="text" id="start_time_min" class="inp" value="15"></td>
+                            <td class="con"><input type="text" id="start_time_max" class="inp" value="25"></td>
                         </tr>
                         <tr>
-                            <th colspan="3">Наполнение прибыльной части</th>
+                            <th colspan="3">Наполнение тела слитка</th>
 
                         </tr>
                         <tr>
                             <td class="txt">Масса</td>
-                            <td class="con" colspan="2"><input type="text" id="prib_wight" class="inp"></td>
+                            <td class="con" colspan="2"><input type="text" id="body_wight" class="inp" value="700"></td>
                         </tr>
                         <tr>
-                            <td class="txt">Скорость</td>
-                            <td class="con"><input type="text" id="prib_speed_min" class="inp"></td>
-                            <td class="con"><input type="text" id="prib_speed_max" class="inp"></td>
+                            <td class="txt">Время</td>
+                            <td class="con"><input type="text" id="body_speed_min" class="inp" value="300"></td>
+                            <td class="con"><input type="text" id="body_speed_max" class="inp" value="330"></td>
                         </tr>
                         <tr>
-                            <th colspan="3">Наполнение донной части</th>
+                            <th colspan="3">Наполнение головной части</th>
 
                         </tr>
                         <tr>
                             <td class="txt">Масса</td>
-                            <td class="con" colspan="2"><input type="text" id="dno_wight" class="inp"></td>
+                            <td class="con" colspan="2"><input type="text" id="head_wight" class="inp" value="700"></td>
                         </tr>
                         <tr>
-                            <td class="txt">Скорость</td>
-                            <td class="con"><input type="text" id="dno_speed_min" class="inp"></td>
-                            <td class="con"><input type="text" id="dno_speed_max" class="inp"></td>
+                            <td class="txt">Время</td>
+                            <td class="con"><input type="text" id="body_speed_min" class="inp" value="150"></td>
+                            <td class="con"><input type="text" id="body_speed_max" class="inp" value="180"></td>
                         </tr>
 
                     </tbody>
@@ -89,27 +121,38 @@
                 <input type="button" name="subm" value="Расчитать" class="btn" onclick="Calc()">
                 <table cellspacing="1px" cellpadding="10" border="1" width="400">
                     <tbody>
-                       
+
+
+
 
                         <tr>
-                            <td class="txt">Масса сливаемой стали</td>
-                            <td id="brutto" class="txt_val" text-align: center></td>
-
-                        </tr>
-
-                        <tr>
-                            <td class="txt">Время наполнения литника</td>
-                            <td id="time_1" class="txt_val"></td>
+                            <td class="txt">Скорость литника</td>
+                            <td id="start_speed_min" class="txt_val"></td>
+                            <td id="start_speed_max" class="txt_val"></td>
 
                         </tr>
                         <tr>
-                            <td class="txt">Время наполения прибыльной части</td>
-                                <td id="time_2" class="txt_val"></td>
+                            <td class="txt">Скорость тела</td>
+                            <td id="body_speed_min" class="txt_val"></td>
+                            <td id="body_speed_max" class="txt_val"></td>
 
                         </tr>
                         <tr>
-                            <td class="txt">Время время наполнения донной части</td>
-                            <td id="time_all" class="txt_val"></td>
+                            <td class="txt">Скорость головы</td>
+                            <td id="head_speed_min" class="txt_val"></td>
+                            <td id="head_speed_max" class="txt_val"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Скорость средняя</td>
+                            <td id="avr_speed_min" class="txt_val"></td>
+                            <td id="avr_speed_max" class="txt_val"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="txt">Общее время</td>
+                            <td id="time_all_min" class="txt_val"></td>
+                            <td id="time_all_max" class="txt_val"></td>
 
                         </tr>
 
@@ -125,9 +168,14 @@
         <div class="svg_speed">
             <svg id="svg_speed" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
         </div>
+        <div class="sim">
+            
+        </div>
+        <div class="svg_sim_speed">
+            <svg id="svg_sim_speed" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
+        </div>
 
-
-        <div class="svg_data_title">
+        <div class="data_title">
             Вводные данные.
         </div>
         <div class="svg_wight_title">
@@ -136,7 +184,10 @@
         <div class="svg_speed_title">
             Скорость.
         </div>
-        <div class="footer"> Версия 0.0.1 <a href="https://github.com/Viktorych/SURS">GitHub</a> &copy; Rudenko O.V.</div>
+        <div class="sim_title">
+            Симулятор
+        </div>
+        <div class="footer"> Версия 0.0.1 <a href="https://github.com/Viktorych/SURSjs">GitHub</a> &copy; Rudenko O.V.</div>
 
     </div>
     <!-- .wrapper -->
